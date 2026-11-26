@@ -1,0 +1,476 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f2;
+    color: #26382b;
+}
+
+
+header {
+    background-color: #153e2b;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a8e063;
+}
+
+
+#inicio {
+    min-height: 75vh;
+    background-color: #153e2b;
+    background-image: linear-gradient(rgba(15,45,30,.75), rgba(15,45,30,.65)), url("imagenes/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#inicio h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 20px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+
+#inicio a {
+    background-color: #a8e063;
+    color: #153e2b;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#inicio a:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+
+footer {
+    background-color: #153e2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+@media (max-width: 600px) {
+    #inicio h2 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+
+
+#filosofia {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f7f2;
+}
+
+#filosofia h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta h3 {
+    color: #153e2b;
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.tarjeta p {
+    line-height: 1.7;
+}
+
+.tarjeta ul {
+    list-style: none;
+    line-height: 2;
+}
+
+#ambiente {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e2efe5;
+}
+
+#ambiente h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.escenario-natural {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background-color: #153e2b;
+    color: white;
+    border-radius: 15px;
+}
+
+.escenario-natural h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.escenario-natural p {
+    line-height: 1.8;
+}
+
+#comunidad {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f7f2;
+}
+
+#comunidad h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.compromiso-social {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 35px;
+    background-color: #d9edc2;
+    border-left: 6px solid #519872;
+    border-radius: 12px;
+}
+
+.compromiso-social h3 {
+    font-size: 26px;
+    color: #153e2b;
+    margin-bottom: 15px;
+}
+
+.compromiso-social p {
+    line-height: 1.8;
+}
+
+
+
+#economia {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e2efe5;
+}
+
+#economia h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.simulador {
+    max-width: 700px;
+    margin: 50px auto 0;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.simulador h3 {
+    color: #153e2b;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.simulador p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.simulador label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.simulador select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #519872;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.simulador button {
+    width: 100%;
+    padding: 15px;
+    background-color: #153e2b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.simulador button:hover {
+    background-color: #519872;
+}
+
+#resultadoCircular:not(:empty) {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e2efe5;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+#energia {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f7f2;
+}
+
+#energia h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.diagrama-energia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px auto;
+    max-width: 1100px;
+}
+
+.etapa {
+    background-color: #153e2b;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.flecha {
+    font-size: 30px;
+    color: #519872;
+}
+
+.calculadora input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #519872;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#resultadoEnergia:not(:empty) {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e2efe5;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .diagrama-energia {
+        flex-direction: column;
+    }
+
+    .flecha {
+        transform: rotate(90deg);
+    }
+
+    .etapa {
+        width: 100%;
+    }
+}
+#ods {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e2efe5;
+}
+
+#ods h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+#ods h4 {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.ods7 {
+    border-top: 6px solid #fcc30b;
+}
+
+.ods11 {
+    border-top: 6px solid #fd9d24;
+}
+
+.ods12 {
+    border-top: 6px solid #bf8b2e;
+}
+
+.ods13 {
+    border-top: 6px solid #3f7e44;
+}
+
+.enlace-ods {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 25px;
+    background-color: #153e2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.enlace-ods:hover {
+    background-color: #519872;
+}
+
+
+
+
+#acciones { padding: 80px 20px; text-align: center; background: #f4f7f2; }
+#acciones h2, #galeria h2 { font-size: 36px; color: #153e2b; margin-bottom: 20px; }
+.lista-acciones { text-align: left; margin: 25px 0; }
+.lista-acciones label { display: flex; align-items: center; gap: 12px; padding: 15px; background: #e2efe5; margin-bottom: 10px; border-radius: 8px; cursor: pointer; }
+.lista-acciones input { width: 20px; height: 20px; accent-color: #153e2b; flex-shrink: 0; }
+.barra-progreso { width: 100%; height: 25px; background: #ddd; border-radius: 20px; overflow: hidden; margin: 20px 0; }
+#progreso { width: 0%; height: 100%; background: #519872; transition: width .4s; }
+#porcentaje { font-weight: bold; color: #153e2b; }
+
+
+#galeria { padding: 80px 20px; text-align: center; background: #e2efe5; }
+.galeria-imagenes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 25px; max-width: 1100px; margin: auto; }
+.foto { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,.1); transition: transform .3s; }
+.foto img { width: 100%; height: 250px; object-fit: cover; display: block; background: #d9edc2; }
+.foto h3 { padding: 20px; color: #153e2b; }
+.foto:hover { transform: translateY(-8px); }
+
+#referencias {
+    padding: 80px 20px;
+    background-color: #f4f7f2;
+    text-align: center;
+}
+
+#referencias h2 {
+    font-size: 36px;
+    color: #153e2b;
+    margin-bottom: 20px;
+}
+
+.fuentes {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.referencia {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid #519872;
+    border-radius: 8px;
+}
+
+.referencia h3 {
+    color: #153e2b;
+    margin-bottom: 10px;
+}
+
+.referencia p {
+    margin-bottom: 15px;
+}
+
+.referencia a {
+    color: #153e2b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.referencia a:hover {
+    text-decoration: underline;
+}
