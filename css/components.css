@@ -1,0 +1,331 @@
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.hero p {
+  max-width: 72ch;
+  opacity: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn:hover {
+  filter: brightness(1.06);
+}
+
+.btn-secondary {
+  background: var(--primary);
+}
+
+/* Tarjetas y listas */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p,
+.card li {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+ul.clean-list {
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+/* Formularios y paneles de salida */
+form.proposal-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.form-intro,
+.diagnostico-texto {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+.proposal-output {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  border-left: 4px solid var(--primary);
+  display: none;
+}
+
+/* Selector de escenarios y barras de progreso */
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  padding: 0.5rem 0.95rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.energy-intro,
+.energy-summary {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.energy-intro {
+  color: var(--muted);
+}
+
+.energy-summary {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.bar-row {
+  margin-bottom: 0.85rem;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.bar-track {
+  height: 12px;
+  background: var(--surface-alt);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+/* Sección Valores (tarjetas destacadas) */
+.values-header {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.values-header h3 {
+  font-size: 1.35rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.2rem;
+}
+
+.values-header p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.15rem;
+}
+
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(22, 36, 28, 0.1);
+  border-top-color: var(--accent);
+}
+
+.value-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-index {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.value-card h4 {
+  color: var(--primary-dark);
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.value-card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+/* Tarjetas con imagen para escenario natural */
+.env-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.env-media-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.env-media-box {
+  width: 100%;
+  height: 185px;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.env-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.env-media-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.env-media-body h4 {
+  color: var(--primary-dark);
+  font-size: 1.08rem;
+}
+
+.env-media-body p {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
